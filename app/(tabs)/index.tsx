@@ -28,6 +28,7 @@ export default function Index() {
           data={movies?.results}
           keyExtractor={(item) => item.id.toString()}
           numColumns={3}
+          className='px-5'
           renderItem={({ item }) => (
             <Text className="text-white text-sm">
               <MovieCard 
@@ -36,12 +37,11 @@ export default function Index() {
             /></Text>
           )}
           columnWrapperStyle={{
-            justifyContent: 'flex-start',
-            gap:20,
-            marginBottom: 20,
-            paddingRight: 5,
-          }}
-          className="mt-2 pb-32"
+            justifyContent: 'center',
+            gap:16,
+            marginVertical: 16,
+           }}
+         
           scrollEnabled={true}
           ListHeaderComponent={
             <View className="px-5">
@@ -51,7 +51,7 @@ export default function Index() {
             </View>
           }
           contentContainerStyle={{
-            paddingBottom: 10,
+            paddingBottom: 100,
           }}
           
         />
